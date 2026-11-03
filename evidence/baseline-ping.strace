@@ -1,0 +1,24 @@
+95152 1793496153.437358 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1"], 0x7ffffdbb2ea0 /* 24 vars */) = 0
+95153 1793496153.439522 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x55cc68908918 /* 24 vars */) = 0
+95153 1793496156.510887 +++ exited with 0 +++
+95152 1793496156.510939 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=52, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95152 1793496156.511061 +++ exited with 0 +++
+20295 1793496156.511074 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=51, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95165 1793496162.592782 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1"], 0x7ffffdbb2ea0 /* 24 vars */) = 0
+95166 1793496162.594084 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x55eac4e0f918 /* 24 vars */) = 0
+95166 1793496165.662872 +++ exited with 0 +++
+95165 1793496165.662993 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=54, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95165 1793496165.663172 +++ exited with 0 +++
+20294 1793496165.663183 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95168 1793496167.806190 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1"], 0x7ffffdbb2ea0 /* 24 vars */) = 0
+95169 1793496167.809010 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x558c99018918 /* 24 vars */) = 0
+95169 1793496170.878633 +++ exited with 0 +++
+95168 1793496170.878679 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=56, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95168 1793496170.878780 +++ exited with 0 +++
+20294 1793496170.878792 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=55, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95171 1793496174.550110 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1"], 0x7ffffdbb2ea0 /* 24 vars */) = 0
+95172 1793496174.551919 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x5616d8d4b918 /* 24 vars */) = 0
+95172 1793496177.630978 +++ exited with 0 +++
+95171 1793496177.631128 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=58, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+95171 1793496177.631311 +++ exited with 0 +++
+20294 1793496177.631333 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=57, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---

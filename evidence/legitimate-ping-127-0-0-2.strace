@@ -1,0 +1,6 @@
+31076 1793588403.270973 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.2"], 0x7fff88231f10 /* 24 vars */) = 0
+31077 1793588403.285190 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.2"], 0x561020e8f918 /* 24 vars */) = 0
+31077 1793588406.381466 +++ exited with 0 +++
+31076 1793588406.381568 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=24, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+31076 1793588406.381707 +++ exited with 0 +++
+3259  1793588406.381717 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=23, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---

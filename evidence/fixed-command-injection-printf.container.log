@@ -1,0 +1,5 @@
+2026-11-02T17:25:57.857003617Z [Mon Nov 02 17:25:57.856855 2026] [php:notice] [pid 30:tid 30] [client 172.18.0.1:54744] PURPLECHECK event=ping_input_rejected reason=invalid_ipv4, referer: http://127.0.0.1:4280/vulnerabilities/exec/
+2026-11-02T17:25:57.857955789Z 172.18.0.1 - - [02/Nov/2026:17:25:57 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1883 "http://127.0.0.1:4280/vulnerabilities/exec/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+2026-11-02T17:26:01.618435455Z [Mon Nov 02 17:26:01.618329 2026] [php:notice] [pid 30:tid 30] [client 172.18.0.1:54744] PURPLECHECK event=ping_input_rejected reason=invalid_ipv4, referer: http://127.0.0.1:4280/vulnerabilities/exec/
+2026-11-02T17:26:01.619032422Z 172.18.0.1 - - [02/Nov/2026:17:26:01 +0000] "POST /vulnerabilities/exec/ HTTP/1.1" 200 1882 "http://127.0.0.1:4280/vulnerabilities/exec/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+2026-11-02T17:26:49.327202722Z 172.18.0.1 - - [02/Nov/2026:17:26:49 +0000] "-" 408 0 "-" "-"

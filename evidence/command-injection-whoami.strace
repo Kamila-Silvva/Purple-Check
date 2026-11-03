@@ -1,0 +1,9 @@
+96043 1793496245.105751 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1; whoami"], 0x7ffffdbb2ea0 /* 24 vars */) = 0
+96044 1793496245.107489 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x55f0155a0918 /* 24 vars */) = 0
+96044 1793496248.190876 +++ exited with 0 +++
+96043 1793496248.190945 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=60, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+96045 1793496248.191163 execve("/usr/bin/whoami", ["whoami"], 0x55f0155a0918 /* 24 vars */) = 0
+96045 1793496248.192484 +++ exited with 0 +++
+96043 1793496248.192528 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=61, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+96043 1793496248.193388 +++ exited with 0 +++
+20292 1793496248.193420 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=59, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---

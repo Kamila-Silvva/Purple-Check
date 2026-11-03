@@ -1,0 +1,31 @@
+Caminhos na referência: /bin/sh, /usr/bin/ping
+
+Origem: command-injection-whoami.strace:1
+PID: 96043
+Horário Unix: 1793496245.105751
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1; whoami"]
+Retorno de execve: 0
+Classificação: observado na referência
+
+Origem: command-injection-whoami.strace:2
+PID: 96044
+Horário Unix: 1793496245.107489
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Classificação: observado na referência
+
+Origem: command-injection-whoami.strace:5
+PID: 96045
+Horário Unix: 1793496248.191163
+Executável: /usr/bin/whoami
+Argumentos: ["whoami"]
+Retorno de execve: 0
+Classificação: revisar
+
+Resumo da coleta avaliada
+Eventos interpretados: 3
+Eventos com caminho na referência: 2
+Eventos classificados como revisar: 1
+Linhas selecionadas não interpretadas: 0

@@ -1,0 +1,135 @@
+Caminhos na referência: /bin/sh, /usr/bin/ping
+
+COLETA: baseline-ping.strace
+
+Origem: baseline-ping.strace:1
+PID: 95152
+Horário Unix: 1793496153.437358
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh
+
+Origem: baseline-ping.strace:2
+PID: 95153
+Horário Unix: 1793496153.439522
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: nenhuma
+
+Origem: baseline-ping.strace:7
+PID: 95165
+Horário Unix: 1793496162.592782
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh
+
+Origem: baseline-ping.strace:8
+PID: 95166
+Horário Unix: 1793496162.594084
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: nenhuma
+
+Origem: baseline-ping.strace:13
+PID: 95168
+Horário Unix: 1793496167.806190
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh
+
+Origem: baseline-ping.strace:14
+PID: 95169
+Horário Unix: 1793496167.809010
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: nenhuma
+
+Origem: baseline-ping.strace:19
+PID: 95171
+Horário Unix: 1793496174.550110
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh
+
+Origem: baseline-ping.strace:20
+PID: 95172
+Horário Unix: 1793496174.551919
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: nenhuma
+
+RESUMO: baseline-ping.strace
+Eventos interpretados: 8
+Linhas selecionadas não interpretadas: 0
+shell_bin_sh: 4 evento(s) sinalizado(s)
+fora_referencia: 0 evento(s) sinalizado(s)
+argumentos_novos: 0 evento(s) sinalizado(s)
+fora_perfil_ping_local: 0 evento(s) sinalizado(s)
+
+COLETA: command-injection-whoami.strace
+
+Origem: command-injection-whoami.strace:1
+PID: 96043
+Horário Unix: 1793496245.105751
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.1; whoami"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh, argumentos_novos, fora_perfil_ping_local
+
+Origem: command-injection-whoami.strace:2
+PID: 96044
+Horário Unix: 1793496245.107489
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.1"]
+Retorno de execve: 0
+Revisar pelas regras: nenhuma
+
+Origem: command-injection-whoami.strace:5
+PID: 96045
+Horário Unix: 1793496248.191163
+Executável: /usr/bin/whoami
+Argumentos: ["whoami"]
+Retorno de execve: 0
+Revisar pelas regras: fora_referencia, fora_perfil_ping_local
+
+RESUMO: command-injection-whoami.strace
+Eventos interpretados: 3
+Linhas selecionadas não interpretadas: 0
+shell_bin_sh: 1 evento(s) sinalizado(s)
+fora_referencia: 1 evento(s) sinalizado(s)
+argumentos_novos: 1 evento(s) sinalizado(s)
+fora_perfil_ping_local: 2 evento(s) sinalizado(s)
+
+COLETA: legitimate-ping-127-0-0-2.strace
+
+Origem: legitimate-ping-127-0-0-2.strace:1
+PID: 31076
+Horário Unix: 1793588403.270973
+Executável: /bin/sh
+Argumentos: ["sh", "-c", "--", "ping  -c 4 127.0.0.2"]
+Retorno de execve: 0
+Revisar pelas regras: shell_bin_sh, argumentos_novos
+
+Origem: legitimate-ping-127-0-0-2.strace:2
+PID: 31077
+Horário Unix: 1793588403.285190
+Executável: /usr/bin/ping
+Argumentos: ["ping", "-c", "4", "127.0.0.2"]
+Retorno de execve: 0
+Revisar pelas regras: argumentos_novos
+
+RESUMO: legitimate-ping-127-0-0-2.strace
+Eventos interpretados: 2
+Linhas selecionadas não interpretadas: 0
+shell_bin_sh: 1 evento(s) sinalizado(s)
+fora_referencia: 0 evento(s) sinalizado(s)
+argumentos_novos: 2 evento(s) sinalizado(s)
+fora_perfil_ping_local: 0 evento(s) sinalizado(s)

@@ -1,0 +1,12 @@
+34827 1793590313.615857 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1; printf PURPLECHECK_BUILTIN_OK"], 0x7fff88231f10 /* 24 vars */) = 0
+34828 1793590313.618507 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x55df73bbc858 /* 24 vars */) = 0
+34828 1793590316.681581 +++ exited with 0 +++
+34827 1793590316.681628 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=34, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+34827 1793590316.681755 +++ exited with 0 +++
+3259  1793590316.681762 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=33, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+34942 1793590344.984353 execve("/bin/sh", ["sh", "-c", "--", "ping  -c 4 127.0.0.1; printf PURPLECHECK_BUILTIN_OK"], 0x7fff88231f10 /* 24 vars */) = 0
+34943 1793590344.987222 execve("/usr/bin/ping", ["ping", "-c", "4", "127.0.0.1"], 0x560ed1d03858 /* 24 vars */) = 0
+34943 1793590348.041494 +++ exited with 0 +++
+34942 1793590348.041543 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=36, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---
+34942 1793590348.041684 +++ exited with 0 +++
+3256  1793590348.041693 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=35, si_uid=33, si_status=0, si_utime=0, si_stime=0} ---

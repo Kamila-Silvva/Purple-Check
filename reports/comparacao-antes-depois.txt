@@ -1,0 +1,100 @@
+COMPARAÇÃO ANTES E DEPOIS DA CORREÇÃO
+Contagens de chamadas e registros; não são métricas de eficácia.
+
+CENÁRIO: Ping legítimo: 127.0.0.1
+Repetições anotadas antes: 4
+Repetições anotadas depois: 1
+
+ANTES
+Arquivo: baseline-ping.strace
+Tamanho: 2416 bytes
+Chamadas de execução interpretadas: 8
+Linhas selecionadas não interpretadas: 0
+  baseline-ping.strace:1 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1"] | retorno=0
+  baseline-ping.strace:2 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+  baseline-ping.strace:7 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1"] | retorno=0
+  baseline-ping.strace:8 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+  baseline-ping.strace:13 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1"] | retorno=0
+  baseline-ping.strace:14 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+  baseline-ping.strace:19 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1"] | retorno=0
+  baseline-ping.strace:20 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+
+DEPOIS
+Arquivo: fixed-legitimate-ping-127-0-0-1.strace
+Tamanho: 326 bytes
+Chamadas de execução interpretadas: 1
+Linhas selecionadas não interpretadas: 0
+  fixed-legitimate-ping-127-0-0-1.strace:1 | /usr/bin/ping | argumentos=["/usr/bin/ping", "-n", "-c", "4", "-w", "5", "127.0.0.1"] | retorno=0
+Log de rejeições após a correção: não incluído neste caso.
+
+CENÁRIO: Adição de whoami
+Repetições anotadas antes: 1
+Repetições anotadas depois: 2
+
+ANTES
+Arquivo: command-injection-whoami.strace
+Tamanho: 892 bytes
+Chamadas de execução interpretadas: 3
+Linhas selecionadas não interpretadas: 0
+  command-injection-whoami.strace:1 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1; whoami"] | retorno=0
+  command-injection-whoami.strace:2 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+  command-injection-whoami.strace:5 | /usr/bin/whoami | argumentos=["whoami"] | retorno=0
+
+DEPOIS
+Arquivo: fixed-command-injection-whoami.strace
+Tamanho: 0 bytes
+Chamadas de execução interpretadas: 0
+Linhas selecionadas não interpretadas: 0
+Log da aplicação: fixed-command-injection-whoami.container.log
+Registros de rejeição interpretados: 2
+Linhas com marcador não interpretadas: 0
+  fixed-command-injection-whoami.container.log:1 | horário=2026-11-02T14:13:58.336364961Z
+  fixed-command-injection-whoami.container.log:3 | horário=2026-11-02T14:14:10.637335108Z
+
+CENÁRIO: Ping legítimo: 127.0.0.2
+Repetições anotadas antes: 1
+Repetições anotadas depois: não realizado
+
+ANTES
+Arquivo: legitimate-ping-127-0-0-2.strace
+Tamanho: 604 bytes
+Chamadas de execução interpretadas: 2
+Linhas selecionadas não interpretadas: 0
+  legitimate-ping-127-0-0-2.strace:1 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.2"] | retorno=0
+  legitimate-ping-127-0-0-2.strace:2 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.2"] | retorno=0
+
+DEPOIS
+Coleta após a correção: não realizada.
+Log de rejeições após a correção: não incluído neste caso.
+
+CENÁRIO: Adição de printf
+Repetições anotadas antes: 2
+Repetições anotadas depois: 2
+
+ANTES
+Arquivo: command-injection-printf.strace
+Tamanho: 1270 bytes
+Chamadas de execução interpretadas: 4
+Linhas selecionadas não interpretadas: 0
+  command-injection-printf.strace:1 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1; printf PURPLECHECK_BUILTIN_OK"] | retorno=0
+  command-injection-printf.strace:2 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+  command-injection-printf.strace:7 | /bin/sh | argumentos=["sh", "-c", "--", "ping  -c 4 127.0.0.1; printf PURPLECHECK_BUILTIN_OK"] | retorno=0
+  command-injection-printf.strace:8 | /usr/bin/ping | argumentos=["ping", "-c", "4", "127.0.0.1"] | retorno=0
+
+DEPOIS
+Arquivo: fixed-command-injection-printf.strace
+Tamanho: 0 bytes
+Chamadas de execução interpretadas: 0
+Linhas selecionadas não interpretadas: 0
+Log da aplicação: fixed-command-injection-printf.container.log
+Registros de rejeição interpretados: 2
+Linhas com marcador não interpretadas: 0
+  fixed-command-injection-printf.container.log:1 | horário=2026-11-02T17:25:57.857003617Z
+  fixed-command-injection-printf.container.log:3 | horário=2026-11-02T17:26:01.618435455Z
+
+Total de linhas selecionadas não interpretadas: 0
+Coleta vazia ou sem chamadas interpretadas não comprova bloqueio.
+Registros de rejeição da aplicação não são alertas das regras Python.
+A associação dos logs aos cenários vem das anotações do laboratório.
+O marcador de rejeição não contém a entrada enviada.
+O parser de strace mantém as limitações de analyze.py.
